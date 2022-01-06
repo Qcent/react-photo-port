@@ -15,4 +15,12 @@ describe('ContactForm component', () => {
     const { asFragment } = render(<ContactForm />);
     expect(asFragment()).toMatchSnapshot();
   });
-})
+});
+
+describe('Component visability', () => {
+  it('Title and Submit', () => {
+    const { getByTestId } = render(<ContactForm />);
+    expect(getByTestId('contact-title')).toHaveTextContent('Contact me');
+    expect(getByTestId('contact-button')).toHaveTextContent('Submit');
+  })
+});
