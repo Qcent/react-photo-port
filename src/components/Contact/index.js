@@ -21,6 +21,7 @@ function ContactForm({ category }) {
     else {
       if (!e.target.value.length) {
         setErrorMessage(`${e.target.name} is required.`);
+        setFormState({ ...formState, [e.target.name]: e.target.value });
       } else {
         setErrorMessage('');
       }
@@ -33,6 +34,22 @@ function ContactForm({ category }) {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(formState);
+
+    if (!errorMessage) {
+      if (!name.length) {
+        setErrorMessage(`Name is required.`);
+        return;
+      }
+      if (!validateEmail(email)) {
+        setErrorMessage(`Your email is invalid.`);
+        return;
+      }
+      if (!message.length) {
+        setErrorMessage(`Message is required.`);
+        return;
+      }
+      //submit form
+    }
   };
 
   return (
