@@ -1,70 +1,111 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Demo react-photo-portfolio
+ 
+ ![MIT](https://img.shields.io/badge/License-MIT-orange)  ![JavaScript](https://img.shields.io/badge/Tech-JavaScript-lightblue)  ![Node.js](https://img.shields.io/badge/Tech-Node.js-lightblue)  ![React](https://img.shields.io/badge/Tech-React-lightblue)  ![JSX](https://img.shields.io/badge/Tech-JSX-lightblue)  ![Jest](https://img.shields.io/badge/Tech-Jest-lightblue) 
 
-## Available Scripts
+## Description
+A photo portfolio rendered in a Single Page Application created with React.  
 
-In the project directory, you can run:
+Screenshot \
+![Screenshot](./assets/images/app-screenshot-1.png)
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [Description](#description)
+* [Table of Contents](#table-of-contents)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions)
+* [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+This project requires that Node.js be installed on the target machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Copy the repository files and then run npm install to install all required dependencies.
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once all dependencies have been successfully added you can type `npm start` to start the server. It should automatically open a webpage in your default browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Customizing the Portfolio
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Some manual editing will be required to display your own photographs. \
+1. On line 8 of `src/App.js` you will need to edit the categories array to reflect your desired categories.
+2. On line 6 of `src/components/PhotoList/index.js` you will need to edit the photos array to reflect the photos you add to the portfolio.
+3. A 'Cover Image' is located at `src/assets/cover/cover-image.jpg` overwrite this file with another of your choice.
+4. Photographs must be located at `src/assets/` with thumbnails being located in the `small` directory and full size images in `large`.  Images must be saved with a `.jpg` extension and stored in folders according to their category and named sequentially starting from 0 for each category. The sequential ordering should match the image data ordering from `src/components/PhotoList/index.js` photos array per category. 
 
-### `npm run eject`
+*eg.*
+```
+src/assets/small/cats/0.jpg  // thumbnail
+src/assets/large/cats/0.jpg  // full size
+src/assets/small/cats/1.jpg  // thumbnail
+src/assets/large/cats/1.jpg  // full size
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+src/assets/small/fish/0.jpg  // thumbnail
+src/assets/large/fish/0.jpg  // full size
+```
+*PhotoList/index.js*
+```
+  const [photos] = useState([
+    {
+      name: 'Carp A Deim',
+      category: 'fish',
+      description: 'My only picture of my favourite carp',
+    },
+    {
+      name: 'Muffins',
+      category: 'cats',
+      description: 'My 0th picture of my cat category',
+    },
+    {
+      name: 'Rumpleteazer',
+      category: 'cats',
+      description: 'My 1st picture of my cat category',
+    },
+   ]);
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Any contributions are welcome. Just fork the project, test any code you add and request a merge! 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tests
 
-## Learn More
+To run the suite of included tests just type `npm run test`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Questions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[GitHub: Qcent](https://github.com/Qcent)  
+dquinn8@cogeco.ca
 
-### Code Splitting
+   
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+MIT License
 
-### Analyzing the Bundle Size
+Copyright (c) 2022 Dave Quinn
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### Making a Progressive Web App
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+                 
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+     
