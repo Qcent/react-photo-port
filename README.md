@@ -6,6 +6,7 @@
 ## Description
 A photo portfolio rendered in a Single Page Application created with React.  
 
+DEMO Deployment : https://qcent.github.io/react-photo-port/
 Screenshot \
 ![Screenshot](./assets/images/app-screenshot-1.png)
 
@@ -15,6 +16,8 @@ Screenshot \
 * [Table of Contents](#table-of-contents)
 * [Installation](#installation)
 * [Usage](#usage)
+  * [Customizing](#customizing-the-portfolio)
+  * [Building](#building-your-portfolio)
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
@@ -68,6 +71,10 @@ src/assets/large/fish/0.jpg  // full size
     },
    ]);
 ```
+
+### Building Your Custom Page
+
+After your site is up and running on your local machine you can build the site out as an optimized deployable package by typing `npm run build`. Then you can copy the contents of the `./build` directory to your webserver of choice.
 
 ## Contributing
 
