@@ -6,7 +6,7 @@
 ## Description
 A photo portfolio rendered in a Single Page Application created with React.  
 
-DEMO Deployment : https://qcent.github.io/react-photo-port/
+DEMO Deployment : https://qcent.github.io/react-photo-port/ \
 Screenshot \
 ![Screenshot](./assets/images/app-screenshot-1.png)
 
@@ -17,7 +17,7 @@ Screenshot \
 * [Installation](#installation)
 * [Usage](#usage)
   * [Customizing](#customizing-the-portfolio)
-  * [Building](#building-your-portfolio)
+  * [Building](#building-your-custom-page)
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [Questions](#questions)
